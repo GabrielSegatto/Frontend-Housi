@@ -5,10 +5,11 @@ import Slider from 'react-styled-carousel';
 
 import { Container, Row, Column } from '../layout'
 import { TextMedium } from '../typograph/text'
-import { TitleLarge } from '../typograph/title'
+import { TitleLarge, TitleMedium } from '../typograph/title'
 
 
 import { HeartIcon } from '../../assets/icons/main/heart.icon'
+import DeliveryMan from '../../assets/icons/main/deliveryman.png'
 
 
 import image from '../../assets/images/mainContent-img.png'
@@ -21,7 +22,7 @@ import Img6 from '../../assets/images/Images-Grid/Img-6.png'
 import BTFirLogo from '../../assets/images/Carousel/BTFit.png'
 import RappiLogo from '../../assets/images/Carousel/Rappi.png'
 
-import { MainContentImg, ImagePlaceHolder, Card, CardImg, ALeft, ARight } from './styled'
+import { MainContentImg, ImagePlaceHolder, Card, CardImg, ALeft, ARight, DeliverIcon } from './styled'
 
 
 const Main = ({ t }) => {
@@ -86,8 +87,7 @@ const Main = ({ t }) => {
                     cardsToShow='1'
                     autoSlide='5000'
                     LeftArrow={<ALeft />}
-                    RightArrow={<ARight />}
-                    
+                    RightArrow={<ARight />}  
                 >
                     <Card>
                         <CardImg src={BTFirLogo} />
@@ -108,6 +108,23 @@ const Main = ({ t }) => {
                         </TextMedium>
                     </Card>
                 </Slider>
+            </Row>
+        <Row justify="center" topCustom={50}>
+                <Column xs={7} sm={7}>
+                    <TitleMedium center primary>
+                        {t('main:THANKSTITLE')} 
+                    </TitleMedium>
+                </Column>
+            </Row>
+            <Row justify="center" topCustom={30}>
+                <Column xs={8} sm={8}>
+                    <TextMedium center>
+                    {t('main:THANLSTEXT')} 
+                    </TextMedium>
+                </Column>
+            </Row>
+            <Row justify="center" topCustom={50}>
+                <DeliverIcon src={DeliveryMan} />
             </Row>
         </Container>
     )

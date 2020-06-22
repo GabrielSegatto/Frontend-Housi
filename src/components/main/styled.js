@@ -61,3 +61,9 @@ export const ARight = styled.button`
   outline:none;
 `
 
+export const DeliverIcon = styled.img`
+  width:80%;
+  margin-bottom:50px;
+`
+
+

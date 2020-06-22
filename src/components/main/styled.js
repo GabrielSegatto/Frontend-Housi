@@ -3,17 +3,28 @@ import styled from 'styled-components'
 
 import RightArrow from '../../assets/icons/carousel/RightArrow.png'
 import LeftArrow  from '../../assets/icons/carousel/LeftArrow.png'
+import imageMobile from '../../assets/images/mainContentImg.png'
+import imageDesktop from '../../assets/images/mainContentImgDesktop.png'
 
 
-
-export const MainContentImg = styled.img`
+export const MainContentImg = styled.div`
     width:100vw;
+    height:300px;
     margin-top: 50px;
+    background-image: url(${imageMobile});
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+        width:70vw;
+        height:500px;
+        margin-top: 70px;
+        background-image: url(${imageDesktop})
+    }
 `
 
 export const ImagePlaceHolder = styled.img`
     width:50%;
-    border-radius:5px;
     @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 33%
   }
@@ -63,6 +74,7 @@ export const ARight = styled.button`
 
 export const DeliverIcon = styled.img`
   width:80%;
+  max-width:300px;
   margin-bottom:50px;
 `
 

@@ -14,20 +14,30 @@ const Header = ({ t }) => {
         <Container>
           <Row 
             justify="center"
+            className="justify-content-md-start"
           >
             <Column
               xs={8}
               sm={8}
+              md={4}
+              lg={4}
+              xl={4}
             >
               <TitleLarge white center>
                 {t('header:CATCHPHRASE')}
               </TitleLarge>
             </Column>
           </Row>
-          <Row justify="center">
+          <Row 
+            justify="center"
+            className="justify-content-md-start"
+          >
             <Column
               xs={6}
               sm={6}
+              md={4}
+              lg={4}
+              xl={4}
             >
               <TextLarge white center>
                 {t('header:COMPLEMENT')}

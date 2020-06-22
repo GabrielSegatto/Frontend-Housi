@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { withTranslation } from 'react-i18next'
 
 import { Header as Head } from './styled'

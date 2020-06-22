@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { withTranslation } from 'react-i18next'
+import Slider from 'react-styled-carousel';
 
 import { Container, Row, Column } from '../layout'
-import { TextMedium, TextSmall } from '../typograph/text'
+import { TextMedium } from '../typograph/text'
 import { TitleLarge } from '../typograph/title'
-import { ExampleSlider } from '../carousel'
+
 
 import { HeartIcon } from '../../assets/icons/main/heart.icon'
 import image from '../../assets/images/mainContent-img.png'
@@ -14,8 +15,10 @@ import Img3 from '../../assets/images/Images-Grid/Img-3.png'
 import Img4 from '../../assets/images/Images-Grid/Img-4.png'
 import Img5 from '../../assets/images/Images-Grid/Img-5.png'
 import Img6 from '../../assets/images/Images-Grid/Img-6.png'
+import BTFirLogo from '../../assets/images/Carousel/BTFit.png'
+import RappiLogo from '../../assets/images/Carousel/Rappi.png'
 
-import { MainContentImg, ImagePlaceHolder } from './styled'
+import { MainContentImg, ImagePlaceHolder, Card, CardImg } from './styled'
 
 const Main = ({ t }) => {
 
@@ -73,7 +76,35 @@ const Main = ({ t }) => {
                     <ImagePlaceHolder src={Img6} />
                 </Column>
             </Row>
-            <ExampleSlider />
+            <Row topCustom={50}>
+                <Column>
+                    <Slider
+                        cardsToShow='1'
+                        autoSlide = '5000'
+                    >
+                        <Card>
+                            <CardImg src={BTFirLogo} />
+                            <TextMedium center black>
+                                {t('main:CARD1')}
+                            </TextMedium>
+                            <TextMedium center bold black>
+                                {t('main:CARD1BOLD')}
+                            </TextMedium>
+                        </Card>
+                        <Card>
+                            <CardImg src={RappiLogo} />
+                            <TextMedium center black>
+                                {t('main:CARD2')}
+                            </TextMedium>
+                            <TextMedium center bold black>
+                                {t('main:CARD2BOLD')}
+                            </TextMedium>
+                        </Card>
+                    </Slider>
+                </Column>
+                    
+            </Row>
+            
         </Container>
     )
 }

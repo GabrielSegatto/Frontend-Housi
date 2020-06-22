@@ -20,7 +20,7 @@ export const ImagePlaceHolder = styled.img`
 `
 
 export const Card = styled.div`
-  width:90%;
+  width:100%;
   padding: 30px 0;
   border-top: 1px solid #FA3C6E;
   border-bottom: 1px solid #FA3C6E;
@@ -37,13 +37,16 @@ export const CardImg = styled.img`
 `
 
 export const ALeft = styled.button`
+  display:flex;
   width:20px;
   height:20px;
   border:none;
   padding:0;
   background-image: url(${LeftArrow});
   background-size: contain;
+  background-repeat: no-repeat;
   background-color: #fff;
+  outline:none;
 `
 
 export const ARight = styled.button`
@@ -54,4 +57,7 @@ export const ARight = styled.button`
   background-image: url(${RightArrow});
   background-size: contain;
   background-color: #fff;
+  background-repeat: no-repeat;
+  outline:none;
 `
+

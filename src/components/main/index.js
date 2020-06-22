@@ -2,6 +2,7 @@ import React from 'react'
 import { withTranslation } from 'react-i18next'
 import Slider from 'react-styled-carousel';
 
+
 import { Container, Row, Column } from '../layout'
 import { TextMedium } from '../typograph/text'
 import { TitleLarge } from '../typograph/title'
@@ -21,6 +22,7 @@ import BTFirLogo from '../../assets/images/Carousel/BTFit.png'
 import RappiLogo from '../../assets/images/Carousel/Rappi.png'
 
 import { MainContentImg, ImagePlaceHolder, Card, CardImg, ALeft, ARight } from './styled'
+
 
 const Main = ({ t }) => {
 
@@ -80,6 +82,7 @@ const Main = ({ t }) => {
             </Row>
             <Row topCustom={50}>
                 <Slider
+                    style={{display: "flex", alignItems: "center", justifyContent:"space-between"}}
                     cardsToShow='1'
                     autoSlide='5000'
                     LeftArrow={<ALeft />}

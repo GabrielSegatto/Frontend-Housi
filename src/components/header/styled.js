@@ -7,7 +7,8 @@ export const Header = styled.div`
     background-image: url(${imageMobile});
     background-blend-mode:multiply;
     background-size:100%;
-    width:100vw;
+    background-repeat: no-repeat;
+    width:100%;
     height:100vh;
     display: flex;
     align-items:flex-end;

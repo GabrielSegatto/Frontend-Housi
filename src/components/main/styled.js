@@ -43,8 +43,8 @@ export const Card = styled.div`
 export const CardImg = styled.img`
   height:60px;
   margin-bottom:5px;
-  mix-blend-mode: luminosity;
   opacity: 0.8;
+  mix-blend-mode: luminosity; 
 `
 
 export const ALeft = styled.button`

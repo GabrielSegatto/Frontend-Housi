@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 import image from '../../assets/images/background-header.png'
 
-export const Background = styled.div`
+export const Header = styled.div`
+    background-color: #ABABAB; 
     background-image: url(${image});
+    background-blend-mode:multiply;
     background-size:100%;
     width:100vw;
-    padding:30px;
+    height:100vh;
+    display: flex;
+    align-items:flex-end;
+    padding-bottom:30%;
 `

@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const HeartIcon = ({ width = 25, height = 25 }) => (
+export const HeartIcon = ({ width = 55, height = 50 }) => (
     <svg 
         width={width}
         height={height}
-        viewBox="0 0 25 25"
+        viewBox="0 0 55 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >

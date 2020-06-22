@@ -8,6 +8,8 @@ import { TitleLarge } from '../typograph/title'
 
 
 import { HeartIcon } from '../../assets/icons/main/heart.icon'
+
+
 import image from '../../assets/images/mainContent-img.png'
 import Img1 from '../../assets/images/Images-Grid/Img-1.png'
 import Img2 from '../../assets/images/Images-Grid/Img-2.png'
@@ -18,7 +20,7 @@ import Img6 from '../../assets/images/Images-Grid/Img-6.png'
 import BTFirLogo from '../../assets/images/Carousel/BTFit.png'
 import RappiLogo from '../../assets/images/Carousel/Rappi.png'
 
-import { MainContentImg, ImagePlaceHolder, Card, CardImg } from './styled'
+import { MainContentImg, ImagePlaceHolder, Card, CardImg, ALeft, ARight } from './styled'
 
 const Main = ({ t }) => {
 
@@ -77,34 +79,33 @@ const Main = ({ t }) => {
                 </Column>
             </Row>
             <Row topCustom={50}>
-                <Column>
-                    <Slider
-                        cardsToShow='1'
-                        autoSlide = '5000'
-                    >
-                        <Card>
-                            <CardImg src={BTFirLogo} />
-                            <TextMedium center black>
-                                {t('main:CARD1')}
-                            </TextMedium>
-                            <TextMedium center bold black>
-                                {t('main:CARD1BOLD')}
-                            </TextMedium>
-                        </Card>
-                        <Card>
-                            <CardImg src={RappiLogo} />
-                            <TextMedium center black>
-                                {t('main:CARD2')}
-                            </TextMedium>
-                            <TextMedium center bold black>
-                                {t('main:CARD2BOLD')}
-                            </TextMedium>
-                        </Card>
-                    </Slider>
-                </Column>
+                <Slider
+                    cardsToShow='1'
+                    autoSlide='5000'
+                    LeftArrow={<ALeft />}
+                    RightArrow={<ARight />}
                     
+                >
+                    <Card>
+                        <CardImg src={BTFirLogo} />
+                        <TextMedium center black>
+                            {t('main:CARD1')}
+                        </TextMedium>
+                        <TextMedium center bold black>
+                            {t('main:CARD1BOLD')}
+                        </TextMedium>
+                    </Card>
+                    <Card>
+                        <CardImg src={RappiLogo} />
+                        <TextMedium center black>
+                            {t('main:CARD2')}
+                        </TextMedium>
+                        <TextMedium center bold black>
+                            {t('main:CARD2BOLD')}
+                        </TextMedium>
+                    </Card>
+                </Slider>
             </Row>
-            
         </Container>
     )
 }
